@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://avatars.githubusercontent.com/u/28861843?s=200&v=4" alt="Katalon Google Codebuild"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h1 align="center">Katalon Google Codebuild</h1>
 
 <div align="center">
 
@@ -120,3 +120,4 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 * [Build configuration file schema](https://cloud.google.com/build/docs/build-config-file-schema)
 * [Using secrets from Secret Manager](https://cloud.google.com/build/docs/securing-builds/use-secrets)
 * [Secret Manager](https://console.cloud.google.com/security/secret-manager)
+* 
