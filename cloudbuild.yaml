@@ -1,6 +1,11 @@
 steps:
 - name: 'docker'
   args: ['pull', 'katalonstudio/katalon']
+- name: 'ubuntu'
+  args: ['env']
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args: ['-c', 'env']
 - name: 'docker'
   args: ['run', '-t', '--rm', 'katalonstudio/katalon', 'katalonc.sh', '-projectPath=/workspace', '-browserType="Chrome"', '-retry=0', '-retryStrategy=immediately', '-testSuiteCollectionPath="Test Suites/Simple Test Suite Collection"', '--config', '-webui.autoUpdateDrivers=true', '-apiKey=${_KATALON_API_KEY}']
   secretEnv: ['_KATALON_API_KEY']
