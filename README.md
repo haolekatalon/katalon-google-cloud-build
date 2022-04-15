@@ -122,3 +122,4 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 * [Using secrets from Secret Manager](https://cloud.google.com/build/docs/securing-builds/use-secrets)
 * [Secret Manager](https://console.cloud.google.com/security/secret-manager)
 * [Cloud builders](https://cloud.google.com/build/docs/cloud-builders)
+* [Substituting variable values](https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values)
