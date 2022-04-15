@@ -1,3 +1,4 @@
+steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['pull', 'katalonstudio/katalon']
 - name: 'gcr.io/cloud-builders/docker'
