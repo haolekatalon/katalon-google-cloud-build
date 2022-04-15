@@ -117,6 +117,7 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - References
 
 ## References
+* [Code build dashboard](https://console.cloud.google.com/cloud-build/dashboard)
 * [Build configuration file schema](https://cloud.google.com/build/docs/build-config-file-schema)
 * [Using secrets from Secret Manager](https://cloud.google.com/build/docs/securing-builds/use-secrets)
 * [Secret Manager](https://console.cloud.google.com/security/secret-manager)
