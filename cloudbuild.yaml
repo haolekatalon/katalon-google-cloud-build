@@ -7,5 +7,5 @@ steps:
   secretEnv: ['KATALON_API_KEY']
 availableSecrets:
   secretManager:
-  - versionName: projects/better-world-corp/secrets/KATALON_API_KEY/versions/1
+  - versionName: projects/tidal-mode-347602/secrets/KATALON_API_KEY/versions/1
     env: 'KATALON_API_KEY'
