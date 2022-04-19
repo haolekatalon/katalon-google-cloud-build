@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>Katalon Google Codebuild</name>
+   <name>Katalon Google Cloud Build</name>
    <tag></tag>
    <UUID>0dd576f4-e864-4217-b70b-9a4f2900ef52</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>D:\workspace\katalon-google-codebuild\Katalon Google Codebuild.prj</projectFileLocation>
+   <projectFileLocation>D:\workspace\katalon-google-cloud-build\Katalon Google Cloud Build.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

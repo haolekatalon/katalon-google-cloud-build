@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://avatars.githubusercontent.com/u/28861843?s=200&v=4" alt="Katalon Google Codebuild"></a>
+ <img width=auto height=200px src="https://avatars.githubusercontent.com/u/28861843?s=200&v=4" alt="Katalon Google Cloud Build"></a>
 </p>
 
-<h1 align="center">Katalon Google Codebuild</h1>
+<h1 align="center">Katalon Google Cloud Build</h1>
 
 <div align="center">
 
@@ -16,80 +16,68 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> A sample project of using Katalon Docker image with Google Cloud Build
     <br> 
 </p>
 
 ## 📝 Table of Contents
 
-- [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
-
-## 🧐 About <a name = "about"></a>
-
-Write about 1-2 paragraphs describing the purpose of your project.
+- [References](#references)
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+* A valid Katalon API Key<br/>
+  Refer to [Generate API keys][Generate_API_Key] for more information about API key generation.
 
+* Enable Google [Cloud Build API][Enable_Cloud_Build_API]
+
+* Enable [Secret Manager API][Using_Secret_Manager]
+
+* [Prepare a secret][Using_Secret_Manager] to store the Katalon API key
+
+
+### Setup cloudbuid project
+
+Create a `cloudbuild.yaml` file at the root of your katalon project
+
+```yaml
+steps:
+- name: 'docker'
+  args: ['pull', 'katalonstudio/katalon']
+- name: 'docker'
+  entrypoint: 'sh'
+  args: ['-c', 'docker run -t --rm -v /workspace:/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -browserType="Chrome" -retry=0 -retryStrategy=immediately -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" --config -webui.autoUpdateDrivers=true -apiKey=$$KATALON_API_KEY']
+  secretEnv: ['KATALON_API_KEY']
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_ID/secrets/KATALON_API_KEY/versions/1
+    env: 'KATALON_API_KEY'
 ```
-Give examples
-```
-
-* Prepare secret key
-https://cloud.google.com/build/docs/securing-builds/use-secrets#using_the_encrypted_variable_in_build_requests
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
 Explain how to run the automated tests for this system.
 
-### Break down into end to end tests
+4. 
 
-Explain what these tests test and why
+5. 
 
-```
-Give an example
-```
+### Connect to repo & Create a trigger
 
-### And coding style tests
 
-Explain what these tests test and why
+### Push a commit & Trigger run mannually
 
-```
-Give an example
-```
 
-## 🎈 Usage <a name="usage"></a>
+## 🎈 Reporting <a name="usage"></a>
 
 Add notes about how to use the system.
 
@@ -104,22 +92,24 @@ Add additional notes about how to deploy this on a live system.
 - [VueJs](https://vuejs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Hat tip to anyone whose code was used
 - Inspiration
 - References
 
-## References
+
+## 🧐 References <a name = "references"></a>
+
 * [Code build dashboard](https://console.cloud.google.com/cloud-build/dashboard)
 * [Build configuration file schema](https://cloud.google.com/build/docs/build-config-file-schema)
 * [Using secrets from Secret Manager](https://cloud.google.com/build/docs/securing-builds/use-secrets)
-* [Secret Manager](https://console.cloud.google.com/security/secret-manager)
+* [Secret Manager][Secret_Manager]
 * [Cloud builders](https://cloud.google.com/build/docs/cloud-builders)
 * [Substituting variable values](https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values)
+
+
+[Generate_API_Key]: https://docs.katalon.com/katalon-analytics/docs/ka-api-key.html#generate-a-katalon-api-key
+[Secret_Manager]: https://console.cloud.google.com/security/secret-manager
+[Using_Secret_Manager]: https://cloud.google.com/build/docs/securing-builds/use-secrets
+[Enable_Cloud_Build_API]: https://cloud.google.com/build?hl=en
