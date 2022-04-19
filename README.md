@@ -23,12 +23,8 @@
 ## 📝 Table of Contents
 
 - [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Running the tests](#tests)
+- [Reporting](#reporting)
 - [References](#references)
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
@@ -38,16 +34,17 @@
 * A valid Katalon API Key<br/>
   Refer to [Generate API keys][Generate_API_Key] for more information about API key generation.
 
-* Enable Google [Cloud Build API][Enable_Cloud_Build_API]
+* Enable [Google Cloud Build API][Enable_Cloud_Build_API]
 
 * Enable [Secret Manager API][Using_Secret_Manager]
 
 * [Prepare a secret][Using_Secret_Manager] to store the Katalon API key
 
+![image](https://user-images.githubusercontent.com/46991507/163971669-d94176c6-ece5-489d-b38b-2eb9e1bad36f.png)
 
-### Setup cloudbuid project
+### Setup a cloud build project
 
-Create a `cloudbuild.yaml` file at the root of your katalon project
+* Create a `cloudbuild.yaml` file at the root of your katalon project
 
 ```yaml
 steps:
@@ -63,53 +60,49 @@ availableSecrets:
     env: 'KATALON_API_KEY'
 ```
 
+* You may also like to enable [Katalon TestOps Integration][Katalon_Testops] from your `Project settings` so you can view the reports after the execution.
+
+![image](https://user-images.githubusercontent.com/46991507/163970914-46bb4185-59c3-4fbb-b0bb-ad0b6c2f12ae.png)
+
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
-
-4. 
-
-5. 
+Now to run the test, you only need to create a trigger on the cloud build and run it manually or automatically 
 
 ### Connect to repo & Create a trigger
 
+You can refer to the following document to create a build trigger: [Creating a build trigger][Create_A_Trigger]
 
-### Push a commit & Trigger run mannually
+![image](https://user-images.githubusercontent.com/46991507/163971267-969820fa-f077-4fad-8c3f-96b3f364c801.png)
+
+### Run a build trigger
+
+Now you can run the newly created trigger manually from [Trigger Manager][Trigger_Manager] page, or
+base on the type of the trigger, it can also be triggered automatically.
+
+![image](https://user-images.githubusercontent.com/46991507/163968161-67b440d6-a5a5-4cbd-b1c7-87bdc50af7ff.png)
 
 
-## 🎈 Reporting <a name="usage"></a>
+## 🎈 Reporting <a name="reporting"></a>
 
-Add notes about how to use the system.
+To view the reports from the build, you can enable [Katalon TestOps Integration][Katalon_Testops] on your project. After that, every report will be uploaded automatically to the TestOps server and you can go there to see the testing results.
 
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
-
+![image](https://user-images.githubusercontent.com/46991507/163969648-cd08e919-7e52-4015-a53c-79e945a08a96.png)
 
 ## 🧐 References <a name = "references"></a>
 
-* [Code build dashboard](https://console.cloud.google.com/cloud-build/dashboard)
+* [Cloud Build Dashboard](https://console.cloud.google.com/cloud-build/dashboard)
 * [Build configuration file schema](https://cloud.google.com/build/docs/build-config-file-schema)
-* [Using secrets from Secret Manager](https://cloud.google.com/build/docs/securing-builds/use-secrets)
 * [Secret Manager][Secret_Manager]
-* [Cloud builders](https://cloud.google.com/build/docs/cloud-builders)
+* [Using secrets from Secret Manager][Using_Secret_Manager]
+* [Cloud Builders](https://cloud.google.com/build/docs/cloud-builders)
 * [Substituting variable values](https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values)
-
+* [Katalon TestOps][Katalon_Testops]
+* [Trigger Manager][Trigger_Manager]
 
 [Generate_API_Key]: https://docs.katalon.com/katalon-analytics/docs/ka-api-key.html#generate-a-katalon-api-key
 [Secret_Manager]: https://console.cloud.google.com/security/secret-manager
 [Using_Secret_Manager]: https://cloud.google.com/build/docs/securing-builds/use-secrets
 [Enable_Cloud_Build_API]: https://cloud.google.com/build?hl=en
+[Trigger_Manager]: https://console.cloud.google.com/cloud-build/triggers
+[Create_A_Trigger]: https://cloud.google.com/build/docs/automating-builds/create-manage-triggers#build_trigger
+[Katalon_Testops]: https://docs.katalon.com/katalon-studio/docs/testops-integration.html
