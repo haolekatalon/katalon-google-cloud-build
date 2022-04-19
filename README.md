@@ -87,6 +87,8 @@ After triggering the build, you can go to [History tab][Cloud_Build_History] on 
 
 ![image](https://user-images.githubusercontent.com/46991507/163977614-ec76b2eb-6f5c-479c-bdef-e1d7deb3e0b9.png)
 
+![image](https://user-images.githubusercontent.com/46991507/163978194-1f876a3c-0b2b-416c-9ae3-5eda8c17cb9a.png)
+
 ## 📋 Reporting <a name="reporting"></a>
 
 To view the reports from the build, you can enable [Katalon TestOps Integration][Katalon_Testops] on your project. After that, every report will be uploaded automatically to the TestOps server and you can go there to see the testing results.
