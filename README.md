@@ -64,7 +64,7 @@ availableSecrets:
 
 ![image](https://user-images.githubusercontent.com/46991507/163970914-46bb4185-59c3-4fbb-b0bb-ad0b6c2f12ae.png)
 
-## 🔧 Running the tests <a name = "tests"></a>
+## 🚀 Running the tests <a name = "tests"></a>
 
 Now to run the test, you only need to create a trigger on the cloud build and run it manually or automatically 
 
@@ -82,7 +82,7 @@ base on the type of the trigger, it can also be triggered automatically.
 ![image](https://user-images.githubusercontent.com/46991507/163968161-67b440d6-a5a5-4cbd-b1c7-87bdc50af7ff.png)
 
 
-## 🎈 Reporting <a name="reporting"></a>
+## 📋 Reporting <a name="reporting"></a>
 
 To view the reports from the build, you can enable [Katalon TestOps Integration][Katalon_Testops] on your project. After that, every report will be uploaded automatically to the TestOps server and you can go there to see the testing results.
 
