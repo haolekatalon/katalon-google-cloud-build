@@ -81,6 +81,11 @@ base on the type of the trigger, it can also be triggered automatically.
 
 ![image](https://user-images.githubusercontent.com/46991507/163968161-67b440d6-a5a5-4cbd-b1c7-87bdc50af7ff.png)
 
+### Watching the build
+
+After triggering the build, you can go to [History tab][Cloud_Build_History] on the Google Cloud Build and watch the progress.
+
+![image](https://user-images.githubusercontent.com/46991507/163977614-ec76b2eb-6f5c-479c-bdef-e1d7deb3e0b9.png)
 
 ## 📋 Reporting <a name="reporting"></a>
 
@@ -106,3 +111,4 @@ To view the reports from the build, you can enable [Katalon TestOps Integration]
 [Trigger_Manager]: https://console.cloud.google.com/cloud-build/triggers
 [Create_A_Trigger]: https://cloud.google.com/build/docs/automating-builds/create-manage-triggers#build_trigger
 [Katalon_Testops]: https://docs.katalon.com/katalon-studio/docs/testops-integration.html
+[Cloud_Build_History]: https://console.cloud.google.com/cloud-build/builds
