@@ -34,9 +34,11 @@
 * A valid Katalon API Key<br/>
   Refer to [Generate API keys][Generate_API_Key] for more information about API key generation.
 
-* Enable [Google Cloud Build API][Enable_Cloud_Build_API]
+* A [Google Cloud Project][Create_Google_Cloud_Project]
 
-* Enable [Secret Manager API][Using_Secret_Manager]
+* [Google Cloud Build API][Enable_Cloud_Build_API] must be enabled for your Google Cloud project
+
+* [Secret Manager API][Using_Secret_Manager] must be enabled for your Google Cloud project
 
 * [Prepare a secret][Using_Secret_Manager] to store the Katalon API key
 
@@ -106,6 +108,7 @@ To view the reports from the build, you can enable [Katalon TestOps Integration]
 * [Katalon TestOps][Katalon_Testops]
 * [Trigger Manager][Trigger_Manager]
 
+[Create_Google_Cloud_Project]: https://developers.google.com/workspace/guides/create-project
 [Generate_API_Key]: https://docs.katalon.com/katalon-analytics/docs/ka-api-key.html#generate-a-katalon-api-key
 [Secret_Manager]: https://console.cloud.google.com/security/secret-manager
 [Using_Secret_Manager]: https://cloud.google.com/build/docs/securing-builds/use-secrets
